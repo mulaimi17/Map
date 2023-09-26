@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<div id="map" style="width: 1000px; height: 1000px;"></div>
+<script>
+    // Inisialisasi peta
+    var map = L.map('map').setView([-8.738693, 116.287639], 13);
+
+    // Tambahkan layer tile (misalnya dari OpenStreetMap)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 30,
+    }).addTo(map);
+
+    // Tambahkan marker ke peta
+    L.marker([-8.738693, 116.287639]).addTo(map)
+        .bindPopup('Ini rumah saya.')
+        .openPopup();
+
+        L.marker([-8.738258, 116.287123]).addTo(map)
+        .bindPopup('masjid.')
+        .openPopup();
+
+        L.marker([-8.739690, 116.288401]).addTo(map)
+        .bindPopup('pos ronda.')
+        .openPopup();
+
+        L.marker([-8.735926, 116.285998]).addTo(map)
+        .bindPopup('kantor lurah sasake.')
+        .openPopup();
+
+        L.marker([-8.738683, 116.288607]).addTo(map)
+        .bindPopup('tempat jual telur ayam.')
+        .openPopup();
+</script>
+
+    <title>mapku</title>
+</head>
+<body>
+
+
+    
+</body>
+</html>
